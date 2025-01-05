@@ -1,0 +1,347 @@
+/* Variables */
+:root {
+    --primary-color: #000000;
+    --secondary-color: rgba(131, 59, 60, 255);
+    --background-color: rgba(0, 0, 0, 0.9);
+    --border-color: #fcf8f8;
+    --text-color: #fcf8f8;
+    --hover-color: #000000;
+}
+
+/* Mise en page générale */
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav .top-bar-buttons {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    color: var(--texte-color);
+    margin-bottom: 20px;
+}
+
+/* Section de Contact */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.contact-form button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Informations de contact */
+.info-contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.info-contact p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.info-contact a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Style uniforme pour le menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav .left,
+nav .right {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+    box-shadow: 0 4px 4px rgba(29, 1, 105, 0.541);
+}
+
+/* Style des blocs */
+.about-content {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(254, 254, 255, 0.486);
+    position: relative;
+}
+
+/* Ajout du style pour l'image dans la section .about-content */
+.about-content img.about-image {
+    display: block;
+    max-width: 100%; /* L'image s'adapte à la largeur du conteneur */
+    height: auto; /* Maintient les proportions */
+    margin: 20px auto 0; /* Centre l'image avec un espace au-dessus */
+    border-radius: 10px; /* Coins arrondis pour un design plus élégant */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Ajoute une ombre pour l'esthétique */
+}
+
+/* Articles */
+.news-item {
+    display: flex; /* Active le mode flexbox */
+    align-items: flex-start; /* Aligne l'image avec le début du texte */
+    gap: 20px; /* Espace entre l'image et le texte */
+    margin: 20px 0;
+}
+
+.news-item img {
+    width: 30%; /* Largeur fixe de l'image */
+    height: auto; /* Maintient le ratio de l'image */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(250, 249, 249, 1); /* Ombre */
+}
+
+.news-item-content {
+    flex: 1; /* Le texte occupe l'espace restant */
+}
+
+.news-item h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Modifier la couleur de la ligne de séparation entre les articles */
+.article-divider {
+    border: 0; /* On enlève les bordures par défaut */
+    height: 2px; /* Augmentez l'épaisseur de la ligne pour plus de visibilité */
+    background: #ffffff; /* Couleur de la ligne (orange) */
+    margin: 50px 0; /* Espace autour de la ligne */
+    opacity: 1; /* Opacité à 100% pour rendre la ligne complètement visible */
+}
+
+/* Style pour la barre noire en haut */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.top-bar-buttons a {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 0; 
+    transition: font-size 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.top-bar-buttons a::after {
+    content: " ⌵"; 
+    font-size: 0.8em; 
+    margin-left: 5px; 
+}
+
+.top-bar-buttons a:hover {
+    color: rgba(73, 99, 245, 0.7); 
+    font-size: 18px; 
+}
+
+.black-background {
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+/* Ajout du style pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures pour éviter les doublons */
+    margin: 20px 0; /* Ajoute un espacement autour du tableau */
+}
+
+th, td {
+    border: 1px solid var(--border-color); /* Ajoute une bordure autour des cellules */
+    padding: 10px; /* Ajoute de l'espace à l'intérieur des cellules */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+th {
+    background-color: var(--background-color); /* Couleur d'arrière-plan pour l'en-tête */
+    color: rgb(51, 51, 255)
+}
+
+/* Nouveau style pour l'image et le texte à côté */
+.image-text-container {
+    display: flex; /* Utilisation de flexbox pour aligner l'image et le texte sur la même ligne */
+    align-items: center; /* Centrer l'image et le texte verticalement */
+    margin-top: 20px; /* Espace au-dessus de la section */
+}
+
+.image-carrée {
+    width: 100px; /* Taille de l'image carrée */
+    height: 100px; /* Assurer que l'image reste carrée */
+    object-fit: cover; /* Remplir l'image dans le cadre sans déformation */
+    margin-right: 15px; /* Espace entre l'image et le texte */
+}
+
+.image-text-container p {
+    font-size: 16px; /* Taille du texte */
+    color: var(--text-color); /* Utilisation de la couleur de texte définie dans les variables */
+    
+}
+
+.logo img {
+    width: 75%; /* Augmente la largeur de l'image pour qu'elle soit plus large */
+    height: auto; /* Garde les proportions de l'image */
+    max-width: none; /* Assure que l'image peut dépasser la largeur par défaut */
+    margin-top: 20px; /* Espace au-dessus de l'image si nécessaire */
+}
+.video-link {
+    text-align: center; /* Centrer le texte et le lien */
+    margin-top: 20px; /* Ajouter un espace au-dessus */
+}
+
+.video-link a {
+    color: #af1804; /* Changer la couleur du lien */
+    font-weight: bold;
+    text-decoration: none; /* Supprimer le soulignement */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.video-link a:hover {
+    color: #ff2b2b; /* Changer la couleur du lien au survol */
+}
